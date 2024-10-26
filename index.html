@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link  rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+     <div class="container">
+        <div class="play-box">
+            <div class="img"><img src="pic/panah.jpeg" alt="Img" class="song-img"></div>
+            <div class="details">
+                <h2>Panah</h2>
+                <p>Mitraz</p>
+            </div>
+            <!-- Volume Control -->
+            <div class="volume-control">
+                <i class="fa-solid fa-volume-high"></i>
+                <input type="range" class="progress-bar" id="volume-slider" min="0" max="1" step="0.01" value="1">
+            </div>
+            
+            <audio id="song">
+                <source src="music/MITRAZ - Panah (Official Audio).mp3" type="audio/mpeg">
+            </audio>
+            <div class="song-track"></div>
+            <div class="controls">
+                <div class="playback-bar">
+                    <span id="currentTime">0:00</span>
+                    <input type="range" min="0" max="100" class="progress-bar" id="progress" step="1">
+                    <span id="totalTime">0:00</span>
+                </div>
+
+                <div class="player-controls">
+                    <i class="fa-solid fa-backward-step p-c-icon"></i>
+                    <div onclick="playPause()"><i class="fa-solid  p-c-icon" style="opacity:1; font-size:2rem; padding-bottom:2rem;" id="ctrlIcon"></i></div>
+                    <i class="fa-solid fa-forward-step p-c-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="playlist">
+            <nav class="nav1">
+                <h2>#</h2>
+                <h2>Song</h2>
+                <h2>Artist</h2>
+            </nav>
+             <!-- Search and Filter UI -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by song or artist" oninput="searchSongs()">
+            <select id="filter-category" onchange="filterSongs()">
+                <option value="all">All</option>
+                <option value="Mitraz">Mitraz</option>
+                <option value="Adnan Sami">Adnan Sami</option>
+            </select>
+        </div>
+
+            <div class="songs" id="song-list">
+                <div class="s1 song-details"  data-title="Panah" data-artist="Mitraz" onclick="selectSong(this)">
+                    <audio src="music/MITRAZ - Panah (Official Audio).mp3" type="audio/mpeg"></audio>
+                    <img src="pic/panah.jpeg" class="pic">
+                    <h3 class="title">Panah</h3>
+                    <p>Mitraz</p>
+                </div>
+                <div class="s2 song-details" data-title="Panah" data-artist="Mitraz" onclick="selectSong(this)">
+                    <audio src="music/Khwahish - Official Music Video  @MITRAZ & @aroohmusic   Latest Pop Song 2022.mp3" type="audio/mpeg"></audio>
+                    <img src="pic/khwahish2.jpeg" class="pic">
+                    <h3 class="title">Khwahish</h3>
+                    <p>Mitraz</p>
+                </div>
+                <div class="s3 song-details" data-title="Khayaal" data-artist="Mitraz" onclick="selectSong(this)">
+                    <audio src="music/MITRAZ - Khayaal (Official Audio).mp3" type="audio/mpeg"></audio>
+                    <img src="pic/khayaal.jpeg" class="pic">
+                    <h3 class="title">Khayaal</h3>
+                    <p>Mitraz</p>
+                </div>
+                <div class="s4 song-details" data-title="Chadya" data-artist="Mitraz" onclick="selectSong(this)">
+                    <audio src="music/Chadya.mp3" type="audio/mpeg"></audio>
+                    <img src="pic/chadya2.jpg" class="pic">
+                    <h3 class="title">Chadya</h3>
+                    <p>Mitraz</p>
+                </div>
+                <div class="s5 song-details" data-title="Raatein" data-artist="Mitraz" onclick="selectSong(this)">
+                    <audio src="music/MITRAZ - Raatein (Official Audio).mp3" type="audio/mpeg"></audio>
+                    <img src="pic/Raatein.jpg" class="pic">
+                    <h3 class="title">Raatein</h3>
+                    <p>Mitraz</p>
+                </div>
+                <div class="s6 song-details" data-title="Noor-E-Khuda" data-artist="Adnan Sami" onclick="selectSong(this)">
+                    <audio src="music/Noor E Khuda Full Video - My Name is KhanShahrukh KhanKajolAdnan SamiShreya Ghoshal.mp3" type="audio/mpeg"></audio>
+                    <img src="pic/noor-e-khuda.jpg" class="pic">
+                    <h3 class="title">Noor-E-Khuda</h3>
+                    <p>Adnan Sami</p>
+                </div>
+                <div class="s7 song-details" data-title="Tera Chehra" data-artist="Adnan Sami" onclick="selectSong(this)">
+                    <audio src="music/Tera Chehra Title Track Full (Audio) Song Adnan Sami Pop Album Songs.mp3" type="audio/mpeg"></audio>
+                    <img src="pic/tera-chehra2.jpg" class="pic">
+                    <h3 class="title" style="margin-right:0px;" style="margin-left: 40px;" >Tera Chehra</h3>
+                    <p>Adnan Sami</p>
+                </div>
+                
+            </div>
+        </div>
+     </div>
+
+     <script  src="script.js"></script>
+</body>
+</html>
