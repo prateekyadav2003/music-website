@@ -15,7 +15,7 @@ const totalTimeEl = document.getElementById("totalTime");
 
 const playlist = [
     { src: "music/MITRAZ - Panah (Official Audio).mp3", title: "Panah", artist: "Mitraz", img: "pic/panah.jpeg" },
-    { src: "music/Khwahish - Official Music Video  @MITRAZ & @aroohmusic   Latest Pop Song 2022.mp3", title: "Khwahish", artist: "Mitraz", img: "pic/Khwahish2.jpeg" },
+    { src: "music/Khwahish - Official Music Video  @MITRAZ & @aroohmusic   Latest Pop Song 2022.mp3", title: "Khwahish", artist: "Mitraz", img: "pic/Khwahish.jpg" },
     { src: "music/MITRAZ - Khayaal (Official Audio).mp3", title: "Khayaal", artist: "Mitraz", img: "pic/khayaal.jpeg" },
     { src: "music/Chadya.mp3", title: "Chadya", artist: "Mitraz", img: "pic/chadya2.jpg" },
     { src: "music/MITRAZ - Raatein (Official Audio).mp3", title: "Raatein", artist: "Mitraz", img: "pic/Raatein.jpg" },
