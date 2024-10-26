@@ -15,7 +15,7 @@ body{
 }
 .play-box{
     width:35%;
-    height:530px;
+    height:520px;
     background-color: rgb(23, 33, 25);
     border-radius: 15px;
     box-shadow: 10px  10px 10px rgba(148, 111, 65, 0.5);
@@ -87,7 +87,7 @@ body{
 }
 .playlist{
     width:50%;
-    height:530px;
+    height:520px;
     background-color: rgb(23, 33, 25);
     border-radius: 15px;
     box-shadow: 10px  10px 10px rgba(148, 111, 65, 0.5);
